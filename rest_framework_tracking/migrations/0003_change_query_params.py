@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             'APIRequestLog',
             'query_params',
-            models.TextField(db_index=True, null=True, blank=True),
+            models.CharField(max_length=2048, db_index=True, null=True, blank=True),
         ),
     ]
