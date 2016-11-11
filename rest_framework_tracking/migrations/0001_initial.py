@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 ('remote_addr', models.GenericIPAddressField()),
                 ('host', models.URLField()),
                 ('method', models.CharField(max_length=10)),
-                ('query_params', models.CharField(max_length=2048, db_index=True)),
+                ('query_params', models.CharField(max_length=4096, db_index=True)),
                 ('data', models.TextField(null=True, blank=True)),
                 ('response', models.TextField(null=True, blank=True)),
                 ('user', models.ForeignKey(blank=True, to=settings.AUTH_USER_MODEL, null=True)),
